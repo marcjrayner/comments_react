@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
+import Comment from './Comment'
 
 class CommentList extends Component {
   render() {
     return(
       <div className = "comment-list">
-        I am a CommentList
+        <Comment/>
+        <Comment/>
+        <Comment/>
        </div>
     )
   }
