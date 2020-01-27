@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
+import CommentBox from './containers/CommentBox';
 
 function App() {
-  return (
-    <h1>Helloworld</h1>
-  );
-}
+    return (
+      <CommentBox/>
+    );
+  }
+ 
+
 
 export default App;
