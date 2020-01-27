@@ -3,10 +3,15 @@ import Comment from './Comment'
 
 class CommentList extends Component {
   render() {
+    const commentNodes = this.props.data.map(comment => {
+      return (
+        <Comment author={comment.author}>{comment.text}</Comment>
+      )
+    })
+
     return(
       <div className = "comment-list">
-        <Comment author="Colin">React is a great framework</Comment>
-        <Comment author="Sandy">I am dreaming in React</Comment>
+        {commentNodes}
       </div>
     )
   }
