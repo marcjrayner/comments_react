@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import CommentBox from './containers/CommentBox';
 
 function App() {
-    return (
-      <CommentBox />
-    );
-  }
+  return (
+    <CommentBox />
+  );
+}
 
 export default App;
