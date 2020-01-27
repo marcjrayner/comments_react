@@ -5,10 +5,9 @@ class CommentList extends Component {
   render() {
     return(
       <div className = "comment-list">
-        <Comment/>
-        <Comment/>
-        <Comment/>
-       </div>
+        <Comment author="Colin">React is a great framework</Comment>
+        <Comment author="Sandy">I am dreaming in React</Comment>
+      </div>
     )
   }
 }
