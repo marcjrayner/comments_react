@@ -21,6 +21,13 @@ class CommentBox extends Component {
         }
       ]
     }
+    this.handleSubmitComment = this.handleSubmitComment.bind(this)
+  }
+
+  handleSubmitComment(comment) {
+    comment.id = Date.now(); // this is useful when you dont have db yet
+    const updatedComments = [...this.state.data, comment];
+    this.setState({data: updatedComments});
   }
 
 
@@ -28,7 +35,7 @@ class CommentBox extends Component {
     return (
       <div className="comment-box">
         <h2>Add a comment</h2>
-        <CommentForm/>
+        <CommentForm onCommentSubmit={this.handleSubmitComment}/>
         <h2>Comments</h2>
           <CommentList data={this.state.data}/>
       </div>
